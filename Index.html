@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unemployment Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298, #1a73e8);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2em;
+      margin: 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: white;
+      color: #1e3c72;
+    }
+
+    button:hover {
+      background: #1e3c72;
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Unemployment Community</h1>
+  <button onclick="joinDiscord()">Join Discord</button>
+  <button onclick="getPlaylist()">Get Playlist</button>
+
+  <script>
+    function joinDiscord() {
+      window.location.href = "https://discord.gg/Eh4YeKs35v";
+    }
+
+    function getPlaylist() {
+      let code = prompt("Enter the secret code to access the playlist:");
+      if (code === "AKFRFMBOY69") {
+        window.location.href = "https://www.youtube.com/playlist?list=PLwg2ZgOz3BJquaSPm63WvuO-3MCrR6J1o&jct=T_qY-jT8dIfHcWO6ngysNQ";
+      } else if (code) {
+        alert("Wrong code, try again!");
+      }
+    }
+  </script>
+</body>
+</html>
